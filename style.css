@@ -1,3 +1,104 @@
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+}
+
+.slides {
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    min-width: 100%;
+    transition: ease 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    background-color: gray;
+    font-size: 120%;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.carousel .slide a {
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Sets the text color for the titles and summaries */
+    display: block; /* Ensures the anchor tag behaves as a block, containing all its children */
+    padding: 10px; /* Adds padding for better readability */
+}
+
+.carousel .slide img {
+    width: 100%;
+    height: auto; /* Ensures the image scales correctly within the slide */
+    display: block; /* Ensures the image does not add extra space below (inline-block default behavior) */
+}
+
+.carousel .slide h3 {
+    margin: 10px 0; /* Adds vertical spacing around the title */
+    font-size: 24px; /* Increases the font size of the title for visibility */
+}
+
+.carousel .slide p {
+    font-size: 16px; /* Sets an appropriate font size for the summary */
+    color: #333; /* Darker text color for better readability */
+}
+
+/*****/
+
+article a {
+    text-decoration: none; /* Removes underline from links */
+    color: black; /* Sets the text color for the titles and summaries */
+    display: block; /* Ensures the anchor tag behaves as a block, containing all its children */
+    padding: 10px; /* Adds padding for better readability */
+}
+
+article img {
+    width: 100%;
+    height: auto; /* Ensures the image scales correctly within the slide */
+    display: block; /* Ensures the image does not add extra space below (inline-block default behavior) */
+}
+
+article h3 {
+    margin: 10px 0; /* Adds vertical spacing around the title */
+    font-size: 24px; /* Increases the font size of the title for visibility */
+}
+
+article p {
+    font-size: 16px; /* Sets an appropriate font size for the summary */
+    color: #333; /* Darker text color for better readability */
+}
+
 /* Basic reset */
 * {
     margin: 0;
@@ -7,41 +108,6 @@
 
 body {
     font-family: Arial, sans-serif;
-}
-
-header {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-}
-
-.menu-icon {
-    display: none;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    display: inline;
-    margin-right: 10px;
-}
-
-a {
-    color: white;
-    text-decoration: none;
 }
 
 main {
@@ -77,12 +143,67 @@ footer {
     width: 100%;
 }
 
-/* Responsive Design for smaller screens */
+
+header {
+    position: relative;
+    z-index: 1000;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    display: block; /* Ensure the icon is always displayed */
+    font-size: 24px; /* Size of the menu icon */
+    cursor: pointer; /* Changes the cursor to pointer when hovering over the icon */
+    margin-right: 20px; /* Space between the menu icon and the logo */
+}
+
+.logo {
+    font-size: 24px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    display: inline;
+    margin-right: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+article {
+    width: 100%;
+}
+/* Media query for responsiveness */
 @media (max-width: 600px) {
-    .menu-icon {
-        display: inline-block;
+     .menu-icon {
+        position: absolute;
+        left: 20px; /* Position the menu icon on the left inside the header */
     }
 
+    .logo {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+  
     #menu-items.hidden {
         display: none;
     }
@@ -91,18 +212,17 @@ footer {
         display: block;
         position: absolute;
         background-color: #333;
-        right: 0;
-        top: 60px;
         width: 100%;
+        top: 60px;
+        left: 0;
+        padding: 0;
     }
 
     li {
         display: block;
         text-align: center;
-        margin-top: 10px;
-    }
-
-    article {
-        width: 100%;
+        padding: 10px;
     }
 }
+
+

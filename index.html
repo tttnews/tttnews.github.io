@@ -3,47 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="ogtype" property="og:type" content="website">
+     <meta id="ogtitle" property="og:title" content="The Turrnut Times">
+     <meta id="ogdesc" property="og:description" content="The Turrnut Times is a newspaper website.">
+     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
-    <title>News Site</title>
+    <title>The Turrnut Times</title>
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-            <div id="menu-toggle" class="menu-icon">&#9776;</div>
-            <div class="logo">NewsSite</div>
-            <ul id="menu-items" class="hidden">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">World</a></li>
-                <li><a href="#">Local</a></li>
-                <li><a href="#">Sports</a></li>
-            </ul>
-        </nav>
-    </header>
+    <header id="theheader">
+   </header>
     <main>
         <section class="featured">
-            <h2>Featured Articles</h2>
+             <h2>Featured Articles</h2>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <a href="article1.html"> <!-- Link to the full article -->
+                        <img src="images/sample.jpg" alt="Sample Article 1">
+                        <h3>Article Title 1</h3>
+                        <p>This is a summary of the article...</p>
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="article2.html"> <!-- Link to the full article -->
+                        <img src="images/sample.jpg" alt="Sample Article 2">
+                        <h3>Article Title 2</h3>
+                        <p>This is a summary of the second article...</p>
+                    </a>
+                </div>
+                <div class="slide">
+                    <a href="article3.html"> <!-- Link to the full article -->
+                        <img src="images/sample.jpg" alt="Sample Article 3">
+                        <h3>Article Title 3</h3>
+                        <p>This is a summary of the third article...</p>
+                    </a>
+                </div>
+                <!-- Additional slides can be added here -->
+            </div>
+            <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+            <a class="next" onclick="moveSlide(1)">&#10095;</a>
+        </div>
+		<!-- OTHER ARTICLES -->
             <article>
-                <img src="images/sample.jpg" alt="Sample Article">
-                <h3>Article Title</h3>
-                <p>This is a summary of the article...</p>
-                <a href="#">Read more...</a>
+		<a href="articles/anarticle.html">
+               		 <img src="images/sample.jpg" alt="Sample Article">
+                	<h3>Article Title</h3>
+                	<p>This is a summary of the article...</p>
+                </a>
             </article>
-            <article>
-                <h3>Article Title</h3>
-                <p>This is a summary of the article...</p>
-                <a href="#">Read more...</a>
-            </article>
-            <article>
-                <h3>Article Title</h3>
-                <p>This is a summary of the article...</p>
-                <a href="#">Read more...</a>
-            </article>
-            <!-- More articles can be added here -->
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 NewsSite. All rights reserved.</p>
-    </footer>
+    <footer id="thefooter"></footer>
     <script src="script.js"></script>
 </body>
 </html>
