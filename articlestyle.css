@@ -77,12 +77,14 @@
 article p {
 	line-height:2;
 	font-family: "Times New Roman", Times, serif;
-	font-size:20px;
+	font-size:18px;
 	color:black;
 }
 
 /*****/
-
+p a {
+	color:blue;
+}
 article img {
     width: 100%;
     height: auto; /* Ensures the image scales correctly within the slide */

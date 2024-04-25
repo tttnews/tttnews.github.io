@@ -66,6 +66,7 @@
 
 .carousel .slide h3 {
     margin: 10px 0; /* Adds vertical spacing around the title */
+    font-family: "Times New Roman", Times, serif;
     font-size: 24px; /* Increases the font size of the title for visibility */
 }
 
@@ -108,6 +109,11 @@ article p {
 
 body {
     font-family: Arial, sans-serif;
+}
+
+h2 {
+	font-size:30px;
+	font-family: "Times New Roman", Times, serif;
 }
 
 main {
