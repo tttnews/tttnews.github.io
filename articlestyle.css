@@ -46,6 +46,10 @@
     background-color: rgba(0,0,0,0.8);
 }
 
+article {
+	text-align:left;
+}
+
 .prev {
     left: 0;
     border-radius: 3px 0 0 3px;
