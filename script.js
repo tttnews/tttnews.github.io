@@ -1,4 +1,4 @@
-document.getElementById("theheader").innerHTML = "<nav id=\"navbar\"><div id=\"menu-toggle\" class=\"menu-icon\">&#9776;</div><div class=\"logo\">Unnamed Website</div><ul id=\"menu-items\" class=\"hidden\"><li><a href=\"index.html\">Home</a></li><li><a href=\"#\">World</a></li><li><a href=\"#\">Local</a></li><li><a href=\"#\">Sports</a></li></ul></nav>";
+document.getElementById("theheader").innerHTML = "<nav id=\"navbar\"><div id=\"menu-toggle\" class=\"menu-icon\">&#9776;</div><div class=\"logo\">Unnamed Website</div><ul id=\"menu-items\" class=\"hidden\"><li><a href=\"index.html\">Home</a></li><li><a href=\"#\">Politics</a></li><li><a href=\"#\">Economy</a></li><li><a href=\"#\">Sports</a></li><li><a href=\"#\">Opinion</a></li><li><a href=\"#\">About us</a></li></ul></nav>";
 
 // Toggle mobile menu visibility
 document.getElementById('menu-toggle').addEventListener('click', function() {
